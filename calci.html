@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>CALCI</title>
+        <link rel="website icon" href="calculator.png">
+        <style>
+            .button{
+                width: 80px;
+                height: 80px;
+                cursor: pointer;
+                font-size:20px;
+            }
+            table{
+                width: 350px;
+                height: 500px;
+                
+            }
+
+        </style>
+    </head>
+    <body class="body">
+        <br>
+        <form name="form1">
+        <table align="center">
+            <tr><td colspan="4"><input type="text"  name=answer  readonly style="width: 340px; height: 60px;  font-size: 30px; border-color: rgb(30, 162, 244);"></td></tr>
+            <tr><td><input type="button" class="button" value="C"  onclick = "form1.answer.value = ' ' " style="background-color:rgb(234, 73, 73) "></td>
+                <td><input type="button" class="button"  value="("  onclick = "form1.answer.value += '(' "></td>
+                <td><input type="button" class="button"  value="%"  onclick = "form1.answer.value += '%' "></td>
+                <td><input type="button" class="button"  value="/"  onclick = "form1.answer.value += '/' "></td></tr>
+
+            <tr><td><input type="button" class="button" value="7" onclick = "form1.answer.value += '7' "></td>
+                <td><input type="button" class="button" value="8" onclick = "form1.answer.value += '8' "></td>
+                <td><input type="button" class="button" value="9" onclick = "form1.answer.value += '9' "></td>
+                <td><input type="button" class="button" value="X" onclick = "form1.answer.value += '*' "></td></tr>
+            <tr><td><input type="button" class="button" value="4" onclick = "form1.answer.value += '4' "></td>
+                <td><input type="button" class="button" value="5" onclick = "form1.answer.value += '5' "></td>
+                <td><input type="button" class="button" value="6" onclick = "form1.answer.value += '6' "></td>
+                <td><input type="button" class="button" value="-" onclick = "form1.answer.value += '-' "></td></tr>
+            <tr><td><input type="button" class="button" value="1" onclick = "form1.answer.value += '1' "></td>
+                <td><input type="button" class="button" value="2" onclick = "form1.answer.value += '2' "></td>
+                <td><input type="button" class="button" value="3" onclick = "form1.answer.value += '3' "></td>
+                <td><input type="button" class="button" value="+" onclick = "form1.answer.value += '+' "></td></tr>
+            <tr><td><input type="button" class="button" value=")" onclick = "form1.answer.value += ')' "></td>
+                <td><input type="button" class="button" value="0" onclick = "form1.answer.value += '0' "></td>
+                <td><input type="button" class="button" value="." onclick = "form1.answer.value += '.' "></td>
+                <td><input type="button" class="button" value="=" onclick="calculate()" style="background-color:rgb(236, 158, 62) "></td></tr>
+        </table>
+        </form>
+        <script>function calculate() {
+            try {
+                form1.answer.value=
+            eval(form1.answer.value);
+            } catch (error) {
+                form1.answer.value= "Error";
+            }
+            }
+
+        </script>
+    </body>
+</html>
